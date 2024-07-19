@@ -1,0 +1,76 @@
+
+
+#master{
+    background-color: rgb(255, 255, 255);
+}
+
+#title{
+    font-size: 45px;
+    color: rgb(52, 72, 248);
+    margin-left: 45px;
+}
+
+#containerbutton{
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 35px;
+    margin-left: 45px;
+}
+
+#addbutton{
+    background-color: rgb(11, 140, 11);
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+}
+
+#tablecontainer{
+    background-color: rgb(255, 255, 255);
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+#table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#cabecera{
+    background-color: rgb(52, 72, 248);
+    font-size: 20px;
+    color: white;
+}
+
+#table td, #table th{
+    border: 2px solid rgb(200, 200, 200);
+}
+
+#cuerpo tr{
+    height: 80px;
+}
+
+#boxbutton{
+    text-align: center;
+}
+
+#cuerpo button{
+    width: 70px;
+    height: 35px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+
+#editbutto{
+    background-color: rgb(52, 72, 248);
+}
+
+#deletebutton{
+    background-color: red;
+}
+
+
+

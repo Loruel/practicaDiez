@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="master">
+        <h1 id="title">All users</h1>
+        <div id="containerbutton">
+            <button id="addbutton">Add New User</button>
+        </div>
+        <div id="tablecontainer">
+            <table id="table">
+                <thead id="cabecera">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Profile Picture</th>
+                        <th>Actions</th>    
+                    </tr>
+                </thead>
+                <tbody id="cuerpo">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>Supervisor</td>
+                        <td>None</td>
+                        <td id="boxbutton">
+                            <button id="editbutto">Edit</button>
+                            <button id="deletebutton">Delete</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+document.addEventListener('DOMContentLoaded', function(){
+    fetch('/users')
+    .then(r => r.json)
+    .then(data => {
+        const tbody = document.getElementById('cuerpo')
+
+        data.forEach(user => {
+            let row = document.createElement('tr')
+            row.innerHTML = `
+                            <td>${user.id}</td>
+                            <td>${user.name}</td>
+                            <td>${user.email}</td>
+                            <td>${user.role}</td>
+                            <td>${user.profile_picture}</td>
+                            <td>
+                                <button class="editbutton">Editar</button>
+                                <button class="deletebutton">Eliminar</button>
+                            </td>
+                        `
+                        tbody.appendChild(row) 
+        })
+    })
+    .catch(error => console.error('Error al obtener datos de usuatio:', error))
+})
+    </script>
+
+</body>
+</html>
